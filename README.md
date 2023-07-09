@@ -1,3 +1,5 @@
+## The project is not yet finished, but we are making good progress and we are confident that we will be able to complete it on time
+
 # Timetable Management System for Students and Teachers
 
 The Timetable Management System for Students and Teachers is a Java-based application that provides a user-friendly platform for managing and accessing timetables in educational institutions. This project aims to streamline the scheduling process, enhance organization, and facilitate efficient time management for students and teachers.
