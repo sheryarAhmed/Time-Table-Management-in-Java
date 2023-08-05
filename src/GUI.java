@@ -20,10 +20,8 @@ public class GUI {
     public void addPanel(JPanel panel){
         frame.add(panel);
     }
-    public void run(){
-        frame.setVisible(true);
-        
-
+    public void run(boolean b){
+        frame.setVisible(b);
     }
 }
 class PanelGui {
@@ -57,13 +55,15 @@ class PanelGui {
     }
 }
 class Widgets{
-    private int sizeLabel = 0;int sizeField = 0;int sizePass=0;int sizeBtn =0;int sizeCombo =0;
+    private int sizeLabel = 0;int sizeField = 0;int sizePass=0;int sizeBtn =0;int sizeCombo =0;int checkIndex;
     private JLabel[] label = new JLabel[10];
     private JTextField[] field = new JTextField[10];
     private JPasswordField[] passwordField = new JPasswordField[10];
     private JButton[] button = new JButton[10];
     private JComboBox<String> comboBox[] = new JComboBox[10];
+    private JRadioButton[] checkBox = new JRadioButton[10];
     private Font font = new Font("Roboto",Font.CENTER_BASELINE,14);
+    private ButtonGroup buttonGroup = new ButtonGroup();
     
     
 
@@ -174,8 +174,18 @@ class Widgets{
         panel.add(comboBox[sizeCombo]);
         sizeCombo++;
     }
+    public void setRadioBox(JPanel panel , String name ,int x,int y,int width,int height){
+        checkBox[checkIndex] = new JRadioButton(name);
+        checkBox[checkIndex].setBounds(x, y, width, height);
+        buttonGroup.add(checkBox[checkIndex]);
+        panel.add(checkBox[checkIndex]);
+        checkIndex++;
+    }
+    public void radioboxListener(ActionListener listener){
+        checkBox[checkIndex-1].addActionListener(listener);
+    }
     public int getComboIndex(int index){
-        return comboBox[sizeCombo-1].getSelectedIndex();
+        return comboBox[index].getSelectedIndex();
     }
 
     
