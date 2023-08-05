@@ -32,6 +32,7 @@ class PanelGui {
         panel = new JPanel(layout);
         panel.setPreferredSize(new Dimension(width, height));
         
+        
     }
     public void setBounds(int x,int y,int width,int height){
         panel.setBounds(x, y, width, height);
@@ -173,11 +174,17 @@ class Widgets{
         panel.add(comboBox[sizeCombo]);
         sizeCombo++;
     }
+    public int getComboIndex(int index){
+        return comboBox[sizeCombo-1].getSelectedIndex();
+    }
 
     
     public void addActionListener(ActionListener listener) {
         button[sizeBtn-1].addActionListener(listener);
         
+    }
+    public void comboListener(ActionListener listener){
+        comboBox[sizeCombo-1].addActionListener(listener);
     }
 
     public JTextField getTextField(int num) {
