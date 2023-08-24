@@ -33,10 +33,9 @@ To get started with the Timetable Management System on your local machine, follo
 
 1. Clone the repository:
 
-
 2. Open the project in your preferred Java IDE.
 
-3. Build and run the project.
+3. In src folder find App.java and run.
 
 ## Contributing
 
