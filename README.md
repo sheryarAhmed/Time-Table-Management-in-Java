@@ -10,6 +10,11 @@ The Timetable Management System for Students and Teachers is a Java-based applic
 - Timetable generation using both the Greedy Algorithm and Constraint Satisfaction Algorithm.
 - User-friendly graphical user interface (GUI) for easy navigation and interaction.
 
+## Interface
+![First interface](/images/image.png)
+![admin block](/images/image-1.png)
+![admin panel](/images/image-2.png)
+
 ## Algorithms Used
 
 - Greedy Algorithm: Assigns subjects to available time slots based on locally optimal choices, considering factors like popularity and availability.
